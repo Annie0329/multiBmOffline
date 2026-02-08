@@ -6,6 +6,24 @@ $(document).ready(function () {
     const $sendButton = $('#sendButton');
     const messageList = $('.messageList');
     var id = $('#id').val();
+    var idDefault = `<li class="messageR">
+                <div class="messageTextR">
+                    <p>they go up to the 2F now</p>
+                    <p class="chatUsername">1F</p>
+                </div>
+            </li>
+            <li class="messageL">
+                <div class="messageTextL">
+                    <p>okay!</p>
+                    <p class="chatUsername">2F</p>
+                </div>
+            </li>
+            <li class="messageL">
+                <div class="messageTextL">
+                    <p>so fast</p>
+                    <p class="chatUsername">3F</p>
+                </div>
+            </li>`
     var id1 = `<li class="messageR">
         <div class="messageTextR">
             <p>chat for id1</p>
@@ -19,12 +37,19 @@ $(document).ready(function () {
         </div>
     </li>`
 
+    $('#id').keypress(function (e) {
+        if (e.keyCode == 13) {
+            $('#idButton').mousedown();
+        }
+    });
     $('#idButton').mousedown(function (e) {
         id = $('#id').val();
+        if (id == "idDefault") {
+            $messageList.html(idDefault);
+        }
         if (id == "id1") {
             $messageList.html(id1);
         }
-
         else if (id == "id2") {
             $messageList.html(id2);
         }
@@ -100,6 +125,10 @@ $(document).ready(function () {
               </div>
             </li>
             `
+            if (id == "idDefault") {
+                idDefault = idDefault + messageItem;
+                $messageList.html(idDefault);
+            }
             if (id == "id1") {
                 id1 = id1 + messageItem;
                 $messageList.html(id1);
