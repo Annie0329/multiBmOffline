@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.messageList {
+    height: 200px;
+    overflow: auto;
+    list-style: none;
+    padding: 10px;
+}
+
+.cardFooter {
+    display: flex;
+    padding: 10px;
+}
+
+canvas {
+    border: 1px solid #333;
+    cursor: crosshair;
+}
+
+.image {
+    height: 400px;
+    width: 600px;
+    position: absolute;
+    z-index: 1;
+}
+
+#drawingCanvas {
+    position: absolute;
+    z-index: 2;
+}
+
+.container {
+    position: relative;
+}
+
+.messageR {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.messageTextR {
+    background-color: blueviolet;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 16px;
+    color: white;
+}
+
+.messageL {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.messageTextL {
+    background-color: lightgrey;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 16px;
+    color: black;
+}
