@@ -2,70 +2,76 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Multiple Behavior Mapping Offline</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Bm</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<!-- 增加特徵輸入方法 -->
-<!-- 參考之前研究(如表格、備註欄) -->
-
 <body>
-    <div class="cardBody">
-        <input id="floor" type="text" placeholder="Enter the Number of Floors">
-        <select class="nameField" id="nameField">
-            <option selected="selected" value="1F">1F</option>
-            <option value="2F">2F</option>
-            <option value="3F">3F</option>
-        </select>
-        <input value="idDefault" id="id" type="text" placeholder="Enter/Create ID">
-        <button id="idButton">OK</button>
-        <ul class="messageList" id="messageList">
-            <li class="messageR">
-                <div class="messageTextR">
-                    <p>they go up to the 2F now</p>
-                    <p class="chatUsername">1F</p>
-                </div>
-            </li>
-            <li class="messageL">
-                <div class="messageTextL">
-                    <p>okay!</p>
-                    <p class="chatUsername">2F</p>
-                </div>
-            </li>
-            <li class="messageL">
-                <div class="messageTextL">
-                    <p>so fast</p>
-                    <p class="chatUsername">3F</p>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="cardFooter">
-        <input class="messageField" id="messageField" type="text" placeholder="Enter the message">
-        <button type="button" class="sendButton" id="sendButton">Send</button>
-    </div>
-    <div class="cardHeader">
-        <input id="imageUpload" type="file" accept="image/*" style="display: none;">
-        <button id="imageUploadBtn">Choose a Picture</button>
-
-        <button id="exportBtn">Export SVG</button>
-        <select class="color" id="color">
-            <option selected="selected" value="red">red</option>
-            <option value="yellow">yellow</option>
-            <option value="green">green</option>
-            <option value="blue">blue</option>
-            <option value="purple">purple</option>
-            <option value="black">black</option>
-        </select>
-        <div class="container">
-            <canvas id="drawingCanvas" width="600" height="400"></canvas>
-            <img id="previewImage" src="./img/pic.JPG" class="image" alt="Uploaded image" />
+    <!-- 主頁 -->
+    <div id="mainPage">
+        <!-- 扛棒 -->
+        <div class="header">
+            <button id="settingButton">
+                <img src="./images/Setting botton.svg" alt="">
+            </button>
+            <h1>Mapping</h1>
+            <button>
+                <img src="./images/Chat botton.svg" alt="">
+            </button>
         </div>
+        <!-- 畫布 -->
+        <div class="container">
+            <img id="previewImage" src="./images/pic.JPG" class="image" alt="Uploaded image" />
+            <canvas id="drawingCanvas" width="600" height="400"></canvas>
+        </div>
+        <!-- 按鈕們 -->
+        <div class="buttons">
+            <div class="upperButtons">
+                <input id="imageUpload" type="file" accept="image/*" style="display: none;">
+                <button id="imageUploadBtn" class="galleryButton">
+                    <img src="./images/Gallery.svg" alt="">
+                </button>
+                <button id="exportBtn">
+                    <img src="./images/Export.svg" alt="">
+                </button>
+                <button>
+                    <img src="./images/Clear.svg" alt="">
+                </button>
+            </div>
+            <div class="lowerButtons">
+                <button class="settingButton">
+                    <img src="./images/Review.svg" alt="">
+                </button>
+                <button>
+                    <img src="./images/Object setting.svg" alt="">
+                </button>
+                <button>
+                    <img src="./images/Timer.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- 設定 -->
+    <div id="settingPage">
+        <div class="header">
+            <button id="backMain">
+                <img src="./images/Back botton.svg" alt="">
+            </button>
+            <h1>Setting</h1>
+            <div></div>
+        </div>
+<div class="floorNumber">
+    <img src="./images/Floor number.svg" alt="">
+    <p>The floor number</p>
+    <input id="floor" type="text" placeholder="">
+</div>
     </div>
 
     <script src="./js/canvas2svg.js"></script>
     <script src="./js/jQuery.js"></script>
+    <script src="./js/canvas.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/chatroom.js"></script>
     <script src="./js/image.js"></script>

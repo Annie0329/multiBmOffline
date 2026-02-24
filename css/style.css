@@ -1,66 +1,58 @@
-body {
-    margin: 0;
+.header {
+    position: relative; /* important */
     display: flex;
-    flex-direction: column;
-    font-family: sans-serif;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.messageList {
-    height: 200px;
-    overflow: auto;
-    list-style: none;
-    padding: 10px;
-}
-
-.cardFooter {
-    display: flex;
-    padding: 10px;
-}
-
-canvas {
-    border: 1px solid #333;
-    cursor: crosshair;
+.image,
+#drawingCanvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .image {
-    height: 400px;
-    width: 600px;
-    position: absolute;
-    z-index: 1;
+    object-fit: contain;
+    /* or cover */
 }
 
 #drawingCanvas {
-    position: absolute;
     touch-action: none;
-    z-index: 2;
 }
 
 .container {
     position: relative;
+    margin: 0 auto;
+    /* ✅ THIS centers horizontally */
+    width: 90vw;
+    height: 50vh;
+    /* or 70vh depending on design */
 }
 
-.messageR {
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.buttons {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.upperButtons,
+.lowerButtons {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
-.messageTextR {
-    background-color: blueviolet;
-    padding: 5px;
-    width: fit-content;
-    border-radius: 16px;
-    color: white;
+/* 設定 */
+#settingPage {
+    display: none;
 }
 
-.messageL {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.messageTextL {
-    background-color: lightgrey;
-    padding: 5px;
-    width: fit-content;
-    border-radius: 16px;
-    color: black;
+.header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
