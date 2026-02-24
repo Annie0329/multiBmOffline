@@ -37,12 +37,7 @@ $(document).ready(function () {
         </div>
     </li>`
 
-    $('#id').keypress(function (e) {
-        if (e.keyCode == 13) {
-            $('#idButton').mousedown();
-        }
-    });
-    $('#idButton').mousedown(function (e) {
+    $('#saveButton').on('click', function () {
         id = $('#id').val();
         if (id == "idDefault") {
             $messageList.html(idDefault);
@@ -55,35 +50,15 @@ $(document).ready(function () {
         }
         changeUI();
     });
-    //根據輸入的樓層產生選項
-    $('#floor').on('change', function () {
-        const floorCount = parseInt($(this).val(), 10);
-        const $select = $('#nameField');
-        // Clear existing options
-        $select.empty();
-        // Validate input
-        if (isNaN(floorCount) || floorCount <= 0) {
-            return;
-        }
-        // Generate new options
-        for (let i = 1; i <= floorCount; i++) {
-            $select.append(
-                $('<option>', {
-                    value: i + 'F',
-                    text: i + 'F'
-                })
-            );
-        }
-    });
 
     //更改名稱時換UI
     $('#nameField').on('change', changeUI);
     function changeUI() {
-        // console.log("change ui")
         const selectedUser = $('#nameField').val();
 
         $('#messageList li').each(function () {
             const messageUser = $(this).find('.chatUsername').text().trim();
+
             if (messageUser === selectedUser) {
                 $(this)
                     .removeClass('messageL')
@@ -102,6 +77,7 @@ $(document).ready(function () {
                     .addClass('messageTextL');
             }
         });
+
         messageList.scrollTop(messageList[0].scrollHeight);
     }
     // LISTEN FOR KEYPRESS EVENT
@@ -115,7 +91,7 @@ $(document).ready(function () {
         e.preventDefault();
         //訊息不是空的才傳訊息
         if ($messageField.val() != "") {
-            nameValName = $('#nameField option:selected').text();
+            nameValName = $('#nameField').val();
 
             let messageItem = `
             <li class=messageR>

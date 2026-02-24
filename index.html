@@ -17,14 +17,14 @@
                 <img src="./images/Setting botton.svg" alt="">
             </button>
             <h1>Mapping</h1>
-            <button>
+            <button id="chatroomButton">
                 <img src="./images/Chat botton.svg" alt="">
             </button>
         </div>
         <!-- 畫布 -->
         <div class="container">
             <img id="previewImage" src="./images/pic.JPG" class="image" alt="Uploaded image" />
-            <canvas id="drawingCanvas" width="600" height="400"></canvas>
+            <canvas id="drawingCanvas"></canvas>
         </div>
         <!-- 按鈕們 -->
         <div class="buttons">
@@ -53,20 +53,87 @@
             </div>
         </div>
     </div>
+
     <!-- 設定 -->
     <div id="settingPage">
+        <!-- 扛棒 -->
         <div class="header">
-            <button id="backMain">
+            <button class="backMain">
                 <img src="./images/Back botton.svg" alt="">
             </button>
             <h1>Setting</h1>
             <div></div>
         </div>
-<div class="floorNumber">
-    <img src="./images/Floor number.svg" alt="">
-    <p>The floor number</p>
-    <input id="floor" type="text" placeholder="">
-</div>
+        <!-- 選項們 -->
+        <div class="opts">
+            <!-- 樓層選項 -->
+            <div class="settingOpt">
+                <div class="hori">
+                    <img src="./images/Floor number.svg" alt="">
+                    <p>The floor number</p>
+                </div>
+                <input value="1F" id="nameField" type="text" placeholder="">
+            </div>
+            <!-- ID -->
+            <div class="settingOpt">
+                <div class="hori">
+                    <img src="./images/Create ID.svg" alt="">
+                    <p>Enter/Create ID</p>
+                </div>
+                <input value="idDefault" id="id" type="text" placeholder="Enter/Create ID">
+            </div>
+            <!-- 顏色 -->
+            <div class="settingOpt">
+                <div class="hori">
+                    <img src="./images/Color.svg" alt="">
+                    <p>Color for mapping line</p>
+                </div>
+                <input type="color" id="color" name="color" value="#9B90C2" />
+            </div>
+        </div>
+        <!-- 存檔按鈕 -->
+        <button id="saveButton">
+            <img src="./images/Save Button.svg" alt="">
+        </button>
+    </div>
+
+    <!-- 聊天室 -->
+    <div id="chatroomPage">
+        <!-- 扛棒 -->
+        <div class="chatroomHeader">
+            <button class="backMain">
+                <img src="./images/Back botton.svg" alt="backMain">
+            </button>
+            <h1>Message</h1>
+            <div></div>
+        </div>
+        <!-- 訊息群 -->
+        <ul class="messageList" id="messageList">
+            <li class="messageR">
+                <div class="messageTextR">
+                    <p>they go up to the 2F now</p>
+                    <p class="chatUsername">1F</p>
+                </div>
+            </li>
+            <li class="messageL">
+                <div class="messageTextL">
+                    <p>okay!</p>
+                    <p class="chatUsername">2F</p>
+                </div>
+            </li>
+            <li class="messageL">
+                <div class="messageTextL">
+                    <p>so fast</p>
+                    <p class="chatUsername">3F</p>
+                </div>
+            </li>
+        </ul>
+        <div class="hori footer">
+            <input class="messageField" id="messageField" type="text" placeholder="Enter the message">
+            <button type="button" class="sendButton" id="sendButton">
+                <img src="./images/Send button.svg" alt="">
+            </button>
+        </div>
     </div>
 
     <script src="./js/canvas2svg.js"></script>

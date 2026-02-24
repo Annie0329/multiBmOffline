@@ -1,9 +1,19 @@
+* {
+    margin: 0px;
+}
+
+/* 主頁 */
+/* #mainPage {
+    display: none;
+} */
+
 .header {
-    position: relative; /* important */
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .image,
 #drawingCanvas {
     position: absolute;
@@ -51,8 +61,100 @@ button {
     display: none;
 }
 
-.header h1 {
+.header h1,
+.chatroomHeader h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.settingOpt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.hori {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+#saveButton {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 聊天室 */
+#chatroomPage {
+    display: none;
+
+}
+
+.chatroomHeader {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.messageL .chatUsername {
+    color: #9A9BB1;
+}
+
+.messageR .chatUsername {
+    color: #E9EAEB;
+}
+
+.messageList {
+    padding: 90px 20px;
+    /* height: 100vh; */
+}
+
+.messageR {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.messageTextR {
+    background-color: #546C8F;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 15px 15px 0px;
+    color: white;
+}
+
+.messageL {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.messageTextL {
+    background-color: white;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 0px 15px 15px;
+    color: black;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    bottom: 0;
+    background-color: white;
+    /* padding: 20px; */
+    align-items: center;
+}
+
+.messageField {
+    width: 100%;
+    background-color: #F0F0F3;
+    height: 40%;
 }

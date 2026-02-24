@@ -20,7 +20,7 @@ let drawing = false;
 let hasMoved = false;
 let startX = 0;
 let startY = 0;
-let currentColor = "red"; // default
+let currentColor = "#9B90C2"; // default
 
 // ===============================
 // Style
@@ -33,11 +33,10 @@ function applyBaseStyle(ctx) {
 // ===============================
 // Color selector
 // ===============================
-// const colorSelect = document.getElementById("color");
 
-// colorSelect.addEventListener("change", () => {
-//     currentColor = colorSelect.value;
-// });
+document.getElementById("saveButton").addEventListener("click", () => {
+    currentColor = document.getElementById("color").value
+});
 
 // ===============================
 // Resize Canvas (IMPORTANT)
