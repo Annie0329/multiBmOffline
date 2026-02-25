@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi Bm</title>
     <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
@@ -44,7 +51,7 @@
                 <button class="settingButton">
                     <img src="./images/Review.svg" alt="">
                 </button>
-                <button>
+                <button id="partiButton">
                     <img src="./images/Object setting.svg" alt="">
                 </button>
                 <button>
@@ -109,7 +116,7 @@
         </div>
         <!-- 訊息群 -->
         <ul class="messageList" id="messageList">
-            <li class="messageR">
+            <!-- <li class="messageR">
                 <div class="messageTextR">
                     <p>they go up to the 2F now</p>
                     <p class="chatUsername">1F</p>
@@ -126,9 +133,9 @@
                     <p>so fast</p>
                     <p class="chatUsername">3F</p>
                 </div>
-            </li>
+            </li> -->
         </ul>
-        <div class="hori footer">
+        <div class="footer">
             <input class="messageField" id="messageField" type="text" placeholder="Enter the message">
             <button type="button" class="sendButton" id="sendButton">
                 <img src="./images/Send button.svg" alt="">
@@ -136,6 +143,64 @@
         </div>
     </div>
 
+    <!-- 使用者設定 -->
+    <div id="partiSettingPage">
+        <!-- 扛棒 -->
+        <div class="header">
+            <button class="backMain">
+                <img src="./images/Back botton.svg" alt="backMain">
+            </button>
+            <h1>Participant</h1>
+            <div></div>
+        </div>
+        <div class="opts">
+            <div class="settingOpt">
+                <div class="hori">
+                    <p>Age</p>
+                    <select name="" id="">
+                        <option value="">0-9</option>
+                        <option value="">10-19</option>
+                        <option value="">20-29</option>
+                        <option value="">30-39</option>
+                        <option value="">40-49</option>
+                        <option value="">50-59</option>
+                        <option value="">60-</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="settingOpt">
+                <div class="hori">
+                    <p>Gender</p>
+                    <select name="" id="">
+                        <option value="">Female</option>
+                        <option value="">Male</option>
+                        <option value="">Unknown</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="settingOpt">
+                <div class="hori">
+                    <p>Attributes</p>
+                    <select name="" id="attrOpts">
+                        <option value="">None</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="settingOpt">
+                <div class="hori">
+                    <p>Add Attributes</p>
+                    <div style="display: flex;justify-content: right;">
+                        <input placeholder="Enter new attribute" id="attrNew" type="text">
+                        <button id="addAttr">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <script src="./js/canvas2svg.js"></script>
     <script src="./js/jQuery.js"></script>
     <script src="./js/canvas.js"></script>

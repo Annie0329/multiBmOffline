@@ -1,6 +1,14 @@
 * {
     margin: 0px;
+    font-family: "Inter", sans-serif;
 }
+
+/* #mainPage,
+#settingPage,
+#chatroomPage,
+#partiSettingPage {
+    padding: 20px;
+} */
 
 /* 主頁 */
 /* #mainPage {
@@ -12,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
 }
 
 .image,
@@ -56,6 +65,14 @@ button {
     justify-content: space-between;
 }
 
+.upperButtons {
+    padding: 20px;
+}
+
+.lowerButtons {
+    padding: 20px 20px 30px;
+}
+
 /* 設定 */
 #settingPage {
     display: none;
@@ -79,13 +96,26 @@ button {
     width: 100%;
     display: flex;
     justify-content: left;
+
+}
+
+.hori img {
+    padding: 0px 20px;
 }
 
 #saveButton {
     position: fixed;
-    bottom: 0;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+
+input {
+    width: 60%;
+    border: none;
+    background-color: #F0F0F3;
+    border-radius: 5px;
 }
 
 /* 聊天室 */
@@ -102,6 +132,7 @@ button {
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    padding: 20px;
 }
 
 .messageL .chatUsername {
@@ -113,8 +144,13 @@ button {
 }
 
 .messageList {
-    padding: 90px 20px;
+    padding: 120px 20px;
     /* height: 100vh; */
+}
+
+.messageL,
+.messageR {
+    padding: 5px;
 }
 
 .messageR {
@@ -144,17 +180,30 @@ button {
 }
 
 .footer {
-    position: fixed;
     width: 100%;
-    height: 15%;
+    box-sizing: border-box;
+    position: fixed;
     bottom: 0;
     background-color: white;
-    /* padding: 20px; */
+    padding: 20px 20px 30px;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .messageField {
+    height: 50px;
     width: 100%;
-    background-color: #F0F0F3;
-    height: 40%;
+}
+
+#partiSettingPage {
+    display: none;
+}
+
+#partiSettingPage .hori {
+    justify-content: space-between;
+}
+
+.header img {
+    filter: drop-shadow(10px 10px 10px #F0F0F2);
 }

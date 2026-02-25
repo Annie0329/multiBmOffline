@@ -6,24 +6,25 @@ $(document).ready(function () {
     const $sendButton = $('#sendButton');
     const messageList = $('.messageList');
     var id = $('#id').val();
-    var idDefault = `<li class="messageR">
-                <div class="messageTextR">
-                    <p>they go up to the 2F now</p>
-                    <p class="chatUsername">1F</p>
-                </div>
-            </li>
-            <li class="messageL">
-                <div class="messageTextL">
-                    <p>okay!</p>
-                    <p class="chatUsername">2F</p>
-                </div>
-            </li>
-            <li class="messageL">
-                <div class="messageTextL">
-                    <p>so fast</p>
-                    <p class="chatUsername">3F</p>
-                </div>
-            </li>`
+    var idDefault = "";
+    // var idDefault = `<li class="messageR">
+    //             <div class="messageTextR">
+    //                 <p>they go up to the 2F now</p>
+    //                 <p class="chatUsername">1F</p>
+    //             </div>
+    //         </li>
+    //         <li class="messageL">
+    //             <div class="messageTextL">
+    //                 <p>okay!</p>
+    //                 <p class="chatUsername">2F</p>
+    //             </div>
+    //         </li>
+    //         <li class="messageL">
+    //             <div class="messageTextL">
+    //                 <p>so fast</p>
+    //                 <p class="chatUsername">3F</p>
+    //             </div>
+    //         </li>`
     var id1 = `<li class="messageR">
         <div class="messageTextR">
             <p>chat for id1</p>
