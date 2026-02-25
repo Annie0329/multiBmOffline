@@ -12,7 +12,7 @@ settingButton.addEventListener("click", function () {
 //叫出聊天室
 chatroomButton.addEventListener("click", function () {
     document.getElementById("mainPage").style.display = "none"
-    document.getElementById("chatroomPage").style.display = "block"
+    document.getElementById("chatroomPage").style.display = "flex"
     document.body.style.backgroundColor = "#F0F0F3"
 });
 

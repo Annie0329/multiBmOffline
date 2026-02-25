@@ -117,7 +117,7 @@ $(document).ready(function () {
             changeUI()
             $messageField.val('')
             //訊息會自動滑到底
-            messageList.scrollTop(messageList[0].scrollHeight);
+            $(document).scrollTop($(document).height());
         }
     })
 });

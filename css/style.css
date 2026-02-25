@@ -42,10 +42,8 @@
 .container {
     position: relative;
     margin: 0 auto;
-    /* ✅ THIS centers horizontally */
     width: 90vw;
     height: 50vh;
-    /* or 70vh depending on design */
 }
 
 button {
@@ -66,11 +64,11 @@ button {
 }
 
 .upperButtons {
-    padding: 20px;
+    padding: 10px;
 }
 
 .lowerButtons {
-    padding: 20px 20px 30px;
+    padding: 10px 10px 15px;
 }
 
 /* 設定 */
@@ -126,13 +124,19 @@ input {
 
 .chatroomHeader {
     position: fixed;
-    top: 0;
+    top: 0px;
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     background-color: white;
     padding: 20px;
+}
+
+.chatUsername {
+    font-size: 12px;
+    text-align: end;
+    padding-top: 10px;
 }
 
 .messageL .chatUsername {
@@ -145,7 +149,8 @@ input {
 
 .messageList {
     padding: 120px 20px;
-    /* height: 100vh; */
+    width: 100%;
+    overflow: auto;
 }
 
 .messageL,
@@ -153,37 +158,40 @@ input {
     padding: 5px;
 }
 
-.messageR {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.messageTextR {
-    background-color: #546C8F;
-    padding: 5px;
-    width: fit-content;
-    border-radius: 15px 15px 0px;
-    color: white;
-}
-
 .messageL {
     display: flex;
     justify-content: flex-start;
 }
 
+.messageR {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.messageTextL,
+.messageTextR {
+    padding: 10px;
+}
+
 .messageTextL {
     background-color: white;
-    padding: 5px;
     width: fit-content;
     border-radius: 0px 15px 15px;
     color: black;
+}
+
+.messageTextR {
+    background-color: #546C8F;
+    width: fit-content;
+    border-radius: 15px 15px 0px;
+    color: white;
 }
 
 .footer {
     width: 100%;
     box-sizing: border-box;
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     background-color: white;
     padding: 20px 20px 30px;
     display: flex;
@@ -204,6 +212,8 @@ input {
     justify-content: space-between;
 }
 
-.header img {
+.header img,
+.chatroomHeader img,
+#sendButton img {
     filter: drop-shadow(10px 10px 10px #F0F0F2);
 }
