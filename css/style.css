@@ -76,12 +76,12 @@ button {
     display: none;
 }
 
-.header h1,
+/* .header h1,
 .chatroomHeader h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-}
+} */
 
 .settingOpt {
     display: flex;
